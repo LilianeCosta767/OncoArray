@@ -1,19 +1,19 @@
+import 'package:OncoAssay/login.dart';
 import 'package:flutter/material.dart';
 
 void main() {
   runApp(MyApp());
 }
 
+final bgColor = const Color(0xFFeca99a);
+final bcColor = const Color(0xFF115789);
+
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-        visualDensity: VisualDensity.adaptivePlatformDensity,
-      ),
-      home: MyHomePage(title: 'Login'),
+      home: MyHomePage(title: 'OncoAssay'),
     );
   }
 }
@@ -27,21 +27,18 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  int _counter = 0;
-
-  void _incrementCounter() {
-    setState(() {
-      _counter++;
-    });
-  }
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
+          backgroundColor: bgColor,
           centerTitle: true,
-          title: Text(widget.title),
+          title: Text(
+            widget.title,
+            style: TextStyle(
+                color: bcColor, fontWeight: FontWeight.bold, fontSize: 38),
+          ),
         ),
-        body: Text('Olá Mundo!'));
+        body: Login());
   }
 }
