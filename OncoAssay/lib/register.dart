@@ -20,77 +20,76 @@ class Register extends StatelessWidget {
               fit: BoxFit.cover,
             ),
           ),
-          child: Padding(
-            padding: const EdgeInsets.all(10.0),
-            child: Center(
-              child: ListView(
-                // crossAxisAlignment: CrossAxisAlignment.stretch,
-                // mainAxisAlignment: MainAxisAlignment.center,
-                children: <Widget>[
-                  Divider(),
-                  TextField(
-                      autofocus: true,
-                      keyboardType: TextInputType.emailAddress,
-                      style: TextStyle(color: Colors.blue, fontSize: 20),
-                      decoration: InputDecoration(
-                        labelText: "Nome",
-                        labelStyle: TextStyle(color: Colors.black),
-                      )),
-                  Divider(),
-                  TextField(
-                      autofocus: true,
-                      keyboardType: TextInputType.emailAddress,
-                      style: TextStyle(color: Colors.blue, fontSize: 20),
-                      decoration: InputDecoration(
-                        labelText: "Especialidade",
-                        labelStyle: TextStyle(color: Colors.black),
-                      )),
-                  Divider(),
-                  TextField(
-                      autofocus: true,
-                      keyboardType: TextInputType.emailAddress,
-                      style: TextStyle(color: Colors.blue, fontSize: 20),
-                      decoration: InputDecoration(
-                        labelText: "E-mail",
-                        labelStyle: TextStyle(color: Colors.black),
-                      )),
-                  Divider(),
-                  TextField(
-                      autofocus: true,
-                      obscureText: true,
-                      keyboardType: TextInputType.text,
-                      style: TextStyle(color: Colors.blue, fontSize: 20),
-                      decoration: InputDecoration(
-                        labelText: "Senha do usuário",
-                        labelStyle: TextStyle(color: Colors.black),
-                      )),
-                  Divider(),
-                  TextField(
-                      autofocus: true,
-                      keyboardType: TextInputType.emailAddress,
-                      style: TextStyle(color: Colors.blue, fontSize: 20),
-                      decoration: InputDecoration(
-                        labelText: "Confirmar senha",
-                        labelStyle: TextStyle(color: Colors.black),
-                      )),
-                  ButtonTheme(
-                    height: 35.0,
-                    minWidth: 105.0,
-                    child: RaisedButton(
-                      onPressed: () => {
-                        print("pressionei o botão"),
-                      },
-                      shape: new RoundedRectangleBorder(
-                          borderRadius: new BorderRadius.circular(15.0)),
-                      child: Text(
-                        "Cadastrar",
-                        style: TextStyle(color: Colors.white, fontSize: 20),
-                      ), //Text
-                      color: bcColor,
-                    ), //RaisedButton
-                  ), //ButtonT
-                ],
-              ),
+          child: Center(
+            child: ListView(
+              // crossAxisAlignment: CrossAxisAlignment.stretch,
+              // mainAxisAlignment: MainAxisAlignment.center,
+              //shrinkWrap: true,
+              padding: const EdgeInsets.all(20.0),
+              children: <Widget>[
+                Divider(),
+                TextField(
+                    autofocus: true,
+                    keyboardType: TextInputType.emailAddress,
+                    style: TextStyle(color: Colors.blue, fontSize: 20),
+                    decoration: InputDecoration(
+                      labelText: "Nome",
+                      labelStyle: TextStyle(color: Colors.black),
+                    )),
+                Divider(),
+                TextField(
+                    autofocus: true,
+                    keyboardType: TextInputType.emailAddress,
+                    style: TextStyle(color: Colors.blue, fontSize: 20),
+                    decoration: InputDecoration(
+                      labelText: "Especialidade",
+                      labelStyle: TextStyle(color: Colors.black),
+                    )),
+                Divider(),
+                TextField(
+                    autofocus: true,
+                    keyboardType: TextInputType.emailAddress,
+                    style: TextStyle(color: Colors.blue, fontSize: 20),
+                    decoration: InputDecoration(
+                      labelText: "E-mail",
+                      labelStyle: TextStyle(color: Colors.black),
+                    )),
+                Divider(),
+                TextField(
+                    autofocus: true,
+                    obscureText: true,
+                    keyboardType: TextInputType.text,
+                    style: TextStyle(color: Colors.blue, fontSize: 20),
+                    decoration: InputDecoration(
+                      labelText: "Senha do usuário",
+                      labelStyle: TextStyle(color: Colors.black),
+                    )),
+                Divider(),
+                TextField(
+                    autofocus: true,
+                    keyboardType: TextInputType.emailAddress,
+                    style: TextStyle(color: Colors.blue, fontSize: 20),
+                    decoration: InputDecoration(
+                      labelText: "Confirmar senha",
+                      labelStyle: TextStyle(color: Colors.black),
+                    )),
+                ButtonTheme(
+                  height: 35.0,
+                  minWidth: 105.0,
+                  child: RaisedButton(
+                    onPressed: () => {
+                      print("pressionei o botão"),
+                    },
+                    shape: new RoundedRectangleBorder(
+                        borderRadius: new BorderRadius.circular(15.0)),
+                    child: Text(
+                      "Cadastrar",
+                      style: TextStyle(color: Colors.white, fontSize: 20),
+                    ), //Text
+                    color: bcColor,
+                  ), //RaisedButton
+                ), //ButtonT
+              ],
             ),
           ),
         ) //padding
