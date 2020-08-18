@@ -1,28 +1,31 @@
-import 'package:OncoAssay/login.dart';
-import 'package:OncoAssay/register.dart';
-import 'package:OncoAssay/routes/app_routes.dart';
+import 'package:OncoAssay/screen/categories_onco_screen.dart';
+import 'package:OncoAssay/screen/list_oncoassay.dart';
 import 'package:flutter/material.dart';
+import 'utils/app_routes.dart';
 
-void main() {
-  runApp(MyApp());
-}
-
-final bgColor = const Color(0xFFeca99a);
-final bcColor = const Color(0xFF115789);
+void main() => runApp(MyApp());
 
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      title: 'Flutter Demo',
+      title: 'DeliMeals',
       theme: ThemeData(
-        primarySwatch: Colors.blue,
-        visualDensity: VisualDensity.adaptivePlatformDensity,
+        primarySwatch: Colors.pink,
+        accentColor: Colors.amber,
+        fontFamily: 'Raleway',
+        canvasColor: Color.fromRGBO(255, 254, 229, 1),
+        textTheme: ThemeData.light().textTheme.copyWith(
+              title: TextStyle(
+                fontSize: 20,
+                fontFamily: 'RobotoCondensed',
+              ),
+            ),
       ),
       routes: {
-        AppRoutes.HOME: (_) => Login(),
-        AppRoutes.REGISTER: (_) => Register()
+        AppRoutes.HOME: (ctx) => ListOncoAssay(),
+        AppRoutes.CATEGORIES_ONCO: (ctx) => CategoriesOncoScreen(),
+        //AppRoutes.MEAL_DETAIL: (ctx) => MealDetailScreen(),
       },
     );
   }
