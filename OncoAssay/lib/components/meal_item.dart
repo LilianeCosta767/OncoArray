@@ -26,7 +26,10 @@ class MealItem extends StatelessWidget {
       margin: EdgeInsets.symmetric(vertical: 10),
       child: Text(
         title,
-        style: Theme.of(context).textTheme.title,
+        style: TextStyle(
+          fontSize: 25,
+        ),
+        //style: Theme.of(context).textTheme.title,
       ),
     );
   }
@@ -39,7 +42,7 @@ class MealItem extends StatelessWidget {
       margin: EdgeInsets.all(10),
       decoration: BoxDecoration(
           color: Colors.white,
-          border: Border.all(color: Colors.green),
+          border: Border.all(color: Colors.black),
           borderRadius: BorderRadius.circular(10)),
       child: child,
     );
@@ -61,7 +64,13 @@ class MealItem extends StatelessWidget {
                       vertical: 5,
                       horizontal: 10,
                     ),
-                    child: Text(meal.sintomas[index]),
+                    child: Text(
+                      meal.sintomas[index],
+                      style: TextStyle(
+                          fontSize: 16,
+                          fontWeight: FontWeight.w400,
+                          color: Colors.white),
+                    ),
                   ),
                   color: Theme.of(context).accentColor,
                 );
@@ -79,7 +88,13 @@ class MealItem extends StatelessWidget {
                       vertical: 5,
                       horizontal: 10,
                     ),
-                    child: Text(meal.causadores[index]),
+                    child: Text(
+                      meal.causadores[index],
+                      style: TextStyle(
+                          fontSize: 16,
+                          fontWeight: FontWeight.w400,
+                          color: Colors.white),
+                    ),
                   ),
                   color: Theme.of(context).accentColor,
                 );
@@ -97,7 +112,13 @@ class MealItem extends StatelessWidget {
                       vertical: 5,
                       horizontal: 10,
                     ),
-                    child: Text(meal.fatoresderisco[index]),
+                    child: Text(
+                      meal.fatoresderisco[index],
+                      style: TextStyle(
+                          fontSize: 16,
+                          fontWeight: FontWeight.w400,
+                          color: Colors.white),
+                    ),
                   ),
                   color: Theme.of(context).accentColor,
                 );
@@ -115,7 +136,13 @@ class MealItem extends StatelessWidget {
                       vertical: 5,
                       horizontal: 10,
                     ),
-                    child: Text(meal.tratamentos[index]),
+                    child: Text(
+                      meal.tratamentos[index],
+                      style: TextStyle(
+                          fontSize: 16,
+                          fontWeight: FontWeight.w400,
+                          color: Colors.white),
+                    ),
                   ),
                   color: Theme.of(context).accentColor,
                 );
@@ -133,7 +160,13 @@ class MealItem extends StatelessWidget {
                       vertical: 5,
                       horizontal: 10,
                     ),
-                    child: Text(meal.prevencoes[index]),
+                    child: Text(
+                      meal.prevencoes[index],
+                      style: TextStyle(
+                          fontSize: 16,
+                          fontWeight: FontWeight.w400,
+                          color: Colors.white),
+                    ),
                   ),
                   color: Theme.of(context).accentColor,
                 );
