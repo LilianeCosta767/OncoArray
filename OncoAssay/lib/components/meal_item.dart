@@ -66,10 +66,12 @@ class MealItem extends StatelessWidget {
                     ),
                     child: Text(
                       meal.sintomas[index],
+                      textAlign: TextAlign.justify,
                       style: TextStyle(
-                          fontSize: 16,
-                          fontWeight: FontWeight.w400,
-                          color: Colors.white),
+                        fontSize: 16,
+                        fontWeight: FontWeight.w400,
+                        color: Colors.white,
+                      ),
                     ),
                   ),
                   color: Theme.of(context).accentColor,
@@ -90,6 +92,7 @@ class MealItem extends StatelessWidget {
                     ),
                     child: Text(
                       meal.causadores[index],
+                      textAlign: TextAlign.justify,
                       style: TextStyle(
                           fontSize: 16,
                           fontWeight: FontWeight.w400,
@@ -114,6 +117,7 @@ class MealItem extends StatelessWidget {
                     ),
                     child: Text(
                       meal.fatoresderisco[index],
+                      textAlign: TextAlign.justify,
                       style: TextStyle(
                           fontSize: 16,
                           fontWeight: FontWeight.w400,
@@ -138,6 +142,7 @@ class MealItem extends StatelessWidget {
                     ),
                     child: Text(
                       meal.tratamentos[index],
+                      textAlign: TextAlign.justify,
                       style: TextStyle(
                           fontSize: 16,
                           fontWeight: FontWeight.w400,
@@ -162,6 +167,7 @@ class MealItem extends StatelessWidget {
                     ),
                     child: Text(
                       meal.prevencoes[index],
+                      textAlign: TextAlign.justify,
                       style: TextStyle(
                           fontSize: 16,
                           fontWeight: FontWeight.w400,
