@@ -1,6 +1,7 @@
 import 'package:OncoAssay/models/meal.dart';
 import 'package:OncoAssay/utils/app_routes.dart';
 import 'package:flutter/material.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class MealItem extends StatelessWidget {
   final Meal meal;
@@ -79,7 +80,7 @@ class MealItem extends StatelessWidget {
               },
             ),
           ),
-          _createSectionTitle(context, 'Causadores'),
+          /* _createSectionTitle(context, 'Causadores'),
           _createSectionContainer(
             ListView.builder(
               itemCount: meal.causadores.length,
@@ -103,7 +104,7 @@ class MealItem extends StatelessWidget {
                 );
               },
             ),
-          ),
+          ), */
           _createSectionTitle(context, 'Fatores de Risco'),
           _createSectionContainer(
             ListView.builder(
@@ -178,6 +179,20 @@ class MealItem extends StatelessWidget {
                 );
               },
             ),
+          ),
+          SizedBox(
+            height: 10,
+          ),
+          InkWell(
+            child: Text(
+              'Créditos',
+              style: TextStyle(color: Colors.blue[900]),
+            ),
+            onTap: () async {
+              if (await canLaunch("https://www.inca.gov.br/tipos-de-cancer")) {
+                await launch("https://www.inca.gov.br/tipos-de-cancer");
+              }
+            },
           ),
         ],
       ),

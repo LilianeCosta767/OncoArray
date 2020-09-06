@@ -1,7 +1,9 @@
 import 'package:OncoAssay/components/meal_item.dart';
+import 'package:OncoAssay/models/user_manager.dart';
 import 'package:flutter/material.dart';
 import '../models/category.dart';
 import '../data/dummy_data.dart';
+import 'package:provider/provider.dart';
 
 class CategoriesOncoScreen extends StatelessWidget {
   @override
@@ -13,9 +15,22 @@ class CategoriesOncoScreen extends StatelessWidget {
     }).toList();
 
     return Scaffold(
-      appBar: AppBar(
-        title: Text(category.title),
-      ),
+      appBar: AppBar(centerTitle: true, title: Text(category.title), actions: [
+        Consumer<UserManager>(
+          builder: (_, userManager, __) {
+            return Container(
+              padding: EdgeInsets.symmetric(vertical: 20, horizontal: 10),
+              child: Text(
+                'Olá, ${userManager.user?.name ?? ''}',
+                style: TextStyle(
+                  fontSize: 15,
+                  fontWeight: FontWeight.normal,
+                ),
+              ),
+            );
+          },
+        ),
+      ]),
       body: ListView.builder(
           itemCount: categoryMeals.length,
           itemBuilder: (ctx, index) {

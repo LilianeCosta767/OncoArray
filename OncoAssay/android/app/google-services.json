@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "1018044229862",
+    "firebase_url": "https://oncoassay-f5b9a.firebaseio.com",
+    "project_id": "oncoassay-f5b9a",
+    "storage_bucket": "oncoassay-f5b9a.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1018044229862:android:b8a563ffea71fcb16bb327",
+        "android_client_info": {
+          "package_name": "com.example.OncoAssay"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1018044229862-vt39s0u3djqogg9jq8ncdttlae8nkcpc.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBxSKF2Vbuug4-ye24BJUKySuxjCV05fXw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1018044229862-vt39s0u3djqogg9jq8ncdttlae8nkcpc.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -129,13 +129,7 @@ const DUMMY_MEALS = const [
     id: 'm1',
     categories: ['c1'],
     causadores: [
-      'Algumas infecções, como as causadas pelo HPV e pelo HIV',
-      'Infecções sexualmente transmissíveis (IST), como condilomatose, gonorreia, herpes genital e clamídia',
-      'Prática do sexo anal',
-      'Tabagismo',
-      'Fístula anal crônica (ligação anormal entre a superfície do canal anal e o tecido em volta do ânus, com secreção purulenta)',
-      'Pacientes imunodeprimidos que se submeteram a transplantes de rim ou coração',
-      'Condições precárias de higiene e irritação crônica do ânus',
+      'https://www.inca.gov.br/tipos-de-cancer/cancer-anal',
     ],
     sintomas: [
       'Alterações de hábitos intestinais e presença de sangue nas fezes.',
@@ -143,12 +137,13 @@ const DUMMY_MEALS = const [
       'Coceira, ardor, secreções incomuns, feridas na região anal e incontinência fecal (impossibilidade para controlar a saída das fezes).',
     ],
     fatoresderisco: [
-      '-',
-      '-',
-      '-',
-      '-',
-      '-',
-      '-',
+      'Algumas infecções, como as causadas pelo HPV e pelo HIV.',
+      'Infecções sexualmente transmissíveis (IST), como condilomatose, gonorreia, herpes genital e clamídia.',
+      'Prática do sexo anal.',
+      'Tabagismo.',
+      'Fístula anal crônica (ligação anormal entre a superfície do canal anal e o tecido em volta do ânus, com secreção purulenta).',
+      'Pacientes imunodeprimidos que se submeteram a transplantes de rim ou coração.',
+      'Condições precárias de higiene e irritação crônica do ânus.'
     ],
     tratamentos: [
       'O tratamento pode ser clínico e/ou cirúrgico.',
