@@ -3,6 +3,7 @@ import 'package:OncoAssay/screen/list_oncoassay.dart';
 import 'package:OncoAssay/screen/login_screen.dart';
 import 'package:OncoAssay/screen/signup_screen.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:provider/provider.dart';
 import 'models/user_manager.dart';
 import 'utils/app_routes.dart';
@@ -12,6 +13,10 @@ void main() => runApp(MyApp());
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+    SystemChrome.setSystemUIOverlayStyle(
+        SystemUiOverlayStyle(statusBarColor: Colors.transparent));
+
+    SystemChrome.setPreferredOrientations([DeviceOrientation.portraitUp]);
     return ChangeNotifierProvider(
       create: (_) => UserManager(),
       child: MaterialApp(

@@ -31,14 +31,13 @@ class SignUpScreen extends StatelessWidget {
                     shrinkWrap: true,
                     children: <Widget>[
                       TextFormField(
-                        decoration:
-                            const InputDecoration(hintText: 'Nome Completo'),
+                        decoration: const InputDecoration(hintText: 'Nome'),
                         enabled: !userManager.loading,
                         validator: (name) {
                           if (name.isEmpty)
                             return 'Campo obrigatório';
-                          else if (name.trim().split(' ').length <= 1)
-                            return 'Preencha seu Nome completo';
+                          else if (name.trim().split('').length <= 1)
+                            return 'Preencha seu Nome';
                           return null;
                         },
                         onSaved: (name) => user.name = name,

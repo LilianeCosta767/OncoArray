@@ -125,9 +125,11 @@ class LoginScreen extends StatelessWidget {
                             user: User(
                           email: emailController.text,
                         ));
-                    if (await canLaunch("https://www.google.com")) {
-                      await launch("https://www.google.com");
-                    }
+                    scaffoldKey.currentState.showSnackBar(SnackBar(
+                      content: Text(
+                          'Recuperação de senha enviada para o email: Acesse seu email!'),
+                      backgroundColor: Colors.blue,
+                    ));
                   },
                   padding: EdgeInsets.zero,
                   child: const Text('Esqueci minha senha'),
