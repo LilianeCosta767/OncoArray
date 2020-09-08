@@ -15,17 +15,36 @@ class CategoriesOncoScreen extends StatelessWidget {
     }).toList();
 
     return Scaffold(
-      appBar: AppBar(centerTitle: true, title: Text(category.title), actions: [
+      appBar: AppBar(title: Text(category.title), actions: [
         Consumer<UserManager>(
           builder: (_, userManager, __) {
             return Container(
-              padding: EdgeInsets.symmetric(vertical: 20, horizontal: 10),
-              child: Text(
-                'Olá, ${userManager.user?.name ?? ''}',
-                style: TextStyle(
-                  fontSize: 15,
-                  fontWeight: FontWeight.normal,
-                ),
+              padding: EdgeInsets.symmetric(horizontal: 20, vertical: 5),
+              child: Column(
+                children: [
+                  Text(
+                    'Olá, ${userManager.user?.name ?? ''}',
+                    style: TextStyle(
+                      fontSize: 14,
+                      fontWeight: FontWeight.normal,
+                    ),
+                  ),
+                  SizedBox(
+                    height: 20,
+                    width: 80,
+                    child: RaisedButton(
+                      color: Colors.purple,
+                      elevation: 0,
+                      child: Text(
+                        'sair',
+                        style: TextStyle(color: Colors.white),
+                      ),
+                      onPressed: () {
+                        Navigator.of(context).pushReplacementNamed('/');
+                      },
+                    ),
+                  )
+                ],
               ),
             );
           },
